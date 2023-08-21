@@ -1,0 +1,89 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size:16px;
+    overflow-x: hidden;
+}
+
+img {
+    width: 100%;
+}
+
+.preloader {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 1000;
+    transition: all .09s ease-out;
+}
+
+.preloader--hide {
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+}
+
+.preloader_loader, .preloader_percents {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+
+.preloader_percents {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+@keyframes ldio-stzf1tyleom {
+  0% { transform: rotate(0deg) }
+  50% { transform: rotate(180deg) }
+  100% { transform: rotate(360deg) }
+}
+.ldio-stzf1tyleom div {
+  position: absolute;
+  animation: ldio-stzf1tyleom 2s linear infinite;
+  width: 141.84px;
+  height: 141.84px;
+  top: 27.58px;
+  left: 27.58px;
+  border-radius: 50%;
+  box-shadow: 0 6.107px 0 0 #9a127e;
+  transform-origin: 70.92px 73.97349999999999px;
+}
+
+
+.loadingio-spinner-eclipse-y2rhavvctck {
+  width: 197px;
+  height: 197px;
+  display: inline-block;
+  overflow: hidden;
+  background: rgba(241, 242, 243, 0);
+}
+.ldio-stzf1tyleom {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0; /* see note above */
+}
+
+
+.ldio-stzf1tyleom div { 
+    box-sizing: content-box; }
