@@ -1,0 +1,132 @@
+:root {
+    background-color: rgb(253, 253, 253);
+}
+/* :root {
+    --green: #0f0;
+    --white: #fff;
+    --black: #000;
+} */
+
+/* Switch light or dark */
+/* body {
+    background: var(--bg);
+    color: var(--fontColor);
+    font-family: monospace;
+}
+
+ul{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn {
+    position:absolute;
+    top: 20px;
+    left: 250px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+}
+
+li {
+    list-style: circle;
+}
+
+.light-theme {
+   --bg: var(--green);
+   --fontColor: var(--black);
+   --btnBg: var(--black);
+   --btnFontColor: var(--white);
+}
+.dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--green);
+    --btnBg: var(--white);
+    --btnFontColor: var(--black);
+} */
+
+/* END!!! */
+.navbar {
+
+}
+
+
+body {
+    color:rgb(4, 248, 24)
+}
+
+.header,.row {
+width: 100%;
+height: 100%;
+background: url(img/bg_main.jpg);
+}
+
+
+
+
+.row img{
+    width: 30%;
+    height: 30%;
+    border-radius: 150px;
+}
+
+.fakeimg {
+    background-color: aliceblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: black;
+    text-align: center;
+    line-height: 45px
+
+}
+
+#inside{
+    width: 55em;
+    height: 40em;
+}
+#outside {
+    width: 55em;
+    height: 40em;
+    
+}
+
+
+
+.main {
+    background: url(img/bg_main.jpg)
+}
+
+
+
+
+
+
+
+
+
+.Organic img{
+    height: 20rem;
+    width: 20rem;
+
+}
+
+.Blackwork  img{
+    height: 20rem;
+    width: 20rem;
+}
+
+
+
+
+.header {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.footer {
+    background-color: rgb(250, 250, 250);
+    display: flex;
+    width: 100%;
+}
