@@ -264,8 +264,6 @@ h4{
     color: white;
 }
 .contact{
-    
-    
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -280,8 +278,7 @@ h5{
 span{
     padding-right: 10px;
 }
-.contact-list p{
-}
+
 .email-contact{
     width:80%;
     color: gray;
