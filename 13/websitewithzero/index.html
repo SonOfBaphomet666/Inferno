@@ -13,23 +13,15 @@
     <title>666</title>
 </head>
 <body>
-    <!-- SWITCH LIGHT OR DARK -->
-    <!-- <body class="light-theme">
-    <h1>Task List</h1>
-    <p id="msg">Current tasks:</p>
-    <ul>
-        <li class="list">add visual styles</li>
-        <li class="list">add light and dark themes</li>
-        <li>Enable switching the theme</li>
-    </ul>
-    <div>
-        <button class="btn">Dark</button>
-    </div> -->
+   <div class="wrapper">
+    <div class="content">
 
-<!-- END!!! -->
 
 <div class="header">
     <h1>Hellcome!</h1>
+    <canvas id="canvas" width="150px" height="135px" >
+        Извините, ваш браузер нет поддерживает&lt;canvas&gt; элемент.
+      </canvas>
     <h2> Тату студия "Преисподняя"</h2>
 </div>
 <!-- Links!! -->
@@ -81,10 +73,12 @@
         <img id="inside" src="img/213123.png">
         <img id="outside" src="img/outside.jpg">
         <br>
-
-
+<!-- Тут -->
+        <div class="gallery-wrap">
+            <img src="img/back.png" id="backBtn">
+            <div class="gallery">
         <div class="main">
-            <div id="organic" class="Organic">
+            <div  id="organic" class="Organic">
                 <h2>Organica</h2>
             <h3>Мои последние работы</h3>
             <p>Органика (Organica) очень близка к биомеханике, 
@@ -92,12 +86,17 @@
         </br>Аналогично биомеханике Органика сливается с телом, 
                 органами и тканями человека, опутывает их снаружи или произрастает изнутри.
             </p>
+            <!-- <img name="slide" width="200px" height="300px"> -->
         <img src="https://stylesatlife.com/wp-content/uploads/2018/06/Bio-Organic-Tattoo-Designs-2.jpg">
         <img src="https://www.dubuddha.org/wp-content/uploads/2016/04/Bio-Organic-Tattoo-Sleeve-by-Sean-Peters.jpg">
         <img src="https://d1kq2dqeox7x40.cloudfront.net/images/news_uploads/legacy/0/24113.jpg">
         <img src="https://d1kq2dqeox7x40.cloudfront.net/images/posts/20221219_QMKefaLY3730aLC.jpg?w=375">
         <img src="https://inkppl.com/en/assets/components/phpthumbof/cache/180721-2028-5771.2b25590991806d5f8e8489e2406bdc48.jpg">
         <img src="https://galleryoftattoosnow.com/JonvonGlahnOldeTownTattooHOSTED/images/gallery/bio%20organic%20arm%20sleeve%20color%20tattoo%20jon%20von%20glahn%20tattoojon.com1.jpg?v=1">
+        </div>
+        </div>
+        </div>
+        <img src="img/next.png" id="nextBtn">
         </div>
 
         <h2>Black work</h2>
@@ -123,20 +122,18 @@
     <h2>Запись на сеанс обязательна!</h2>
     <p>Адрес:Hell</p>
     <p>Время работы с 10:00 до 20:00</p>
-    <!-- <h3>666</h3> -->
     <i id="phone" class="fa-solid fa-phone">   666-666-666</i>
 </div>
 
 
 
-    <script src="script.js"></script>
-    <!-- <noscript>Enable JS!</noscript> -->
+    <script src="script.js" defer></script>
+
+    <noscript>Enable JS!</noscript>
+    </div>
+    </div>
 </body>
 </html>
 
 
-<!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_example_website -->
-
-<!-- example -->
-<!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_website_footer -->
 

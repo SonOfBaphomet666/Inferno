@@ -1,28 +1,15 @@
 
-// const even = [2,4,6,8,10];
-// const odd = [1,3,5,7,9]
 
-// var sum = even.map(function (num, idx) {
-//   return num + odd[idx];
-// })
+function Dog(name,asdas) {
+    this.name = name;
+    this.asdas = asdas;
+  }
+  
+  let beagle = new Dog("Snoopy", 23);
+  
+  Dog.prototype.isPrototypeOf(beagle);  // yields true
+  
+  // Fix the code below so that it evaluates to true
+  Object.prototype.isPrototypeOf(Dog.prototype);
 
-// console.log(sum)
-
-
-// const even = [2,4,6,8,10];
-// const odd = [1,3,5,7,9]
-
-// function sumTheArrays(naturalNumbers) {
-//   naturalNumbers.map(function(num,idx) {
-//     return num + odd[idx];
-//   })
-// };
-
-// Следующие переменные объявленны в глобальном scope
-
-function eq() {
-  var arr = [ 'a', 'b', 'c', 'd' ]
-  return arr.reverse;
-}
-
-console.log(ar);
+  console.log(beagle)
