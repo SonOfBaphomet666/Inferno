@@ -4,7 +4,6 @@
         <meta charset="UTF-8">
         <meta httpp-equiv="X-UA-Compitable" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <script src="Рассылка.js"></script>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -15,7 +14,7 @@
     <body>
         <header>
             <div class="navbar">
-                <div class="logo"><a href="#">Web dev Creative</a></div>
+                <div class="logo"><a href="#">Ара джан</a></div>
                 <ul class="links">
                     <li><a href="hero">Home</a></li>
                     <li><a href="about">About</a></li>
@@ -36,16 +35,36 @@
                     <li><a href="#" class="action_btn">Get Started</a></li>
             </div>
         </header>
-        
 
+        <main>
+            <section id="hero">
+                <h1>Hellcome</h1>
+                <p>
+                    Закончился всемирный потоп. Ковчег причаливает к Арарату, 
+                </br>
+                и Ной начинает оттуда выгружать клетки с медведями, 
+            </br>
+                собаками, тиграми, львами и другими животными. 
+            </br>
+            А на горе армяне сидят и в нарды играют. 
+        </br>
+            Один другого в бок толкает и говорит: — Ара, смотри, цирк приехал!
+                </p>
+            </section>
+        </main>
+        
+<footer>
         <div class="border">
+            <img class= "img" src="img/Письмо.png">
             <p style="font-size: 20px">Подпишитесь, чтобы каждую неделю
             </br>
                 получать полезные статьи и кейсы из Ада</p>
-        <form onsubmit="sendEmail(event)">
-            <input type="email" id="email" placeholder="Email" width="25px" height="25px" style="color:orange" required></input>
+        <form id="form" onsubmit="sendEmail(event)">
+            <input type="email" id="email" placeholder="Email" required></input>
             <button id="btn" type="submit">Подписаться</button>
         </div>
         </form>
+        </footer>
+            <script src="Рассылка.js"></script>
     </body>
 </html>

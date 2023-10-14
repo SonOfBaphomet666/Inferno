@@ -2,18 +2,11 @@
 
 
 
-function Animal() { }
+// let txt = "I slit the sheet, the sheet I slit, and on the slitted sheet I sit";
+// let searchStr = /sheet/;
+// str.search(searchStr)
 
-Animal.prototype = {
-  constructor: Animal,
-  eat: function() {
-    console.log("nom nom nom");
-  }
-};
 
-// Only change code below this line
-
-let duck = Object.create(Animal.prototype);; // Change this line
-let beagle = Object.create(Animal.prototype);; // Change this line
-
-console.log(Animal())
+(function () {
+  console.log("Chirp, chirp!");
+})();

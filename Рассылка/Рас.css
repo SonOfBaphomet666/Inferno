@@ -22,7 +22,7 @@ li{
 a{
     text-decoration: none;
     color: #fff;
-    font-size: 1em;
+    font-size: 1.5em;
 }
 
 a:hover{
@@ -56,7 +56,7 @@ header {
 
 .navbar .toggle_btn {
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 2rem;
     cursor: pointer;
     display: none;
 }
@@ -72,17 +72,26 @@ header {
     font-weight: bold;
     cursor: pointer;
     transition: scale 0.2 ease;
+    font-size: 1em;
 }
 
 .action_btn:active {
     scale: 0.95;
 }
+
+.action_btn:hover {
+    scale: 1.05;
+    color: rgb(255, 255, 255);
+}
+
+
+
 /* DROPDOWN MENU */
 .dropdown_menu {
     display: none;
     position: absolute;
     right: 2rem;
-    top: 60px;
+    top: 70px;
     height: 0;
     width: 300px;
     background: rgba(255, 255, 255, 0.1);
@@ -94,7 +103,7 @@ header {
 
 
 .dropdown_menu.open{
-    height: 240px;
+    height: 260px;
 }
 
 .dropdown_menu li {
@@ -110,14 +119,37 @@ header {
     justify-content: center;
 }
 
-/* Responsive */
+/* LINK */
+section#hero {
+    height: calc(30em);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color:#fff;
+}
+
+#hero h1{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#hero p{
+    font-size: 1.2em;
+}
+
+
+
+
+/* MEDIA */
 @media (max-width: 992px) {
     .navbar .links,
     .navbar .action_btn {
         display: none;
     }
 
-    .navbar .toggle_btn {
+    .navbar .toggle_btn{
         display: block;
     }
     .dropdown_menu {
@@ -132,50 +164,60 @@ header {
     }
 }
 
+@media (max-width: 576px) {
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 
 /* footer */
 .border{
-    background-color: black;
     height: 11em;
     width: 50em;
     border-radius: 40px;
+    background-color: rgba(175, 43, 82,.5);
 }
 
-p{
+p {
     color:white;
-    margin-left: 1em;
-    margin-top: 2em;
+    margin-left: 1.7em;
+    margin-top: 1em;
 }
 
-
-/* #email{
-    border-radius: 1em;
-    border-width: 1em;
+#email {
     margin-top: 1em;
-    margin-left: 2em;
+    margin-left: 2.5em;
+    width: 20em;
+    height: 3em;
+    border-radius: 10px;
+}
+
+/* placeholder{
+    text-align: center;
 } */
 
+
 #btn{
-    background-color: orange;
-    width: 10em;
-    height: 4em;
+    background-color: rgb(214, 144, 13);
+    width: 7em;
+    height: 3em;
     border-radius: 2em;
+    margin-left: 2em;
+}
+
+
+footer {
+    transform: translate(160em,30em);
+    display: flex;
+}
+
+
+.img {
+    width: 5em;
+    height: 5em;
+    transform: translate(43em,3em);
 }
