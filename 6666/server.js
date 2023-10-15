@@ -1,12 +1,6 @@
+function greeting(line) {
+  let name = line.substring(0, 10);
+  let job = line.substring(20);
+  return ("My name is "+name+" and I am "+job+".");
+}
 
-
-
-
-// let txt = "I slit the sheet, the sheet I slit, and on the slitted sheet I sit";
-// let searchStr = /sheet/;
-// str.search(searchStr)
-
-
-(function () {
-  console.log("Chirp, chirp!");
-})();
