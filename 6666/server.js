@@ -1,18 +1,13 @@
 
-let ladder = {
-  step: 0,
-  up() {
-   this.step++;
-   return this;
-  },
-  down () {
-     this.step--;
-     return this;
-  },
-  showStep: function() {
-    alert( this.step );
-    return this;
+class Rectangle {
+  constructor(width, height) {
+    this.width = width;
+    this,height = height;
+    this.calculateArea = function() {
+        return this.width * this.height;
+    }
   }
 }
 
-ladder.up().up().down().showStep();
+let myRectangle = new Rectangle(5, 6);
+console.log(myRectangle.calculateArea());   
