@@ -119,37 +119,6 @@ window.requestAnimationFrame(clock);
 // clock end
 
 
-// window.addEventListener('scroll', e => {
-// 	document.documentElement.style.setProperty('--scrollTop', `${this.scrollY}px`) // Update method
-// })
-// gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
-// ScrollSmoother.create({
-// 	wrapper: '.wrapper',
-// 	content: '.content'
-// })
-
-// ПЛАВНОСТЬ
-// document.addEventListener("DOMContentLoaded", makeLinksSmooth);
-
-// function makeLinksSmooth() { 
-//   const navLinks = document.querySelectorAll("navbar a"); 
-
-//   navLinks.forEach((link) => {
-//     link.addEventListener("click", smoothScroll);
-//   });
-// }
-
-
-// function smoothScroll(e) {
-//   e.preventDefault();
-//   const targetId = this.getAttribute("href");
-//   const targetElement = document.querySelector(targetId);
-
-//   if (targetElement) { 
-//     targetElement.scrollIntoView({ behavior: "smooth", });
-//   }
-//   targetElement.scrollIntoView({ behavior: "smooth", block: "end" });
-// }
 
 // LINK
 const smoothLinks = document.querySelectorAll('a[href^="#"]');
@@ -166,8 +135,8 @@ for (let smoothLink of smoothLinks) {
 };
 
 
-
-let scrollContainer = document.querySelector(".main");
+// СКРОЛЛ ШОУ
+let scrollContainer = document.querySelector(".gallery");
 let backBtn = document.getElementById("backBtn");
 let backNext = document.getElementById("backNext");
 
@@ -189,27 +158,26 @@ backBtn.addeventListener("click", ()=>{
 });
 
 
-// // Слайды
-// let i = 0;
-// let images = [];
-// let time = 3000;
+// ТУТ НЕ РАБОТАЕТ СКРОЛЛ ДЛЯ ЧЕРНОГО
+let scroller = document.querySelector(".Black");
+let back = document.getElementById("backBtn");
+let Next = document.getElementById("backNext");
 
-// // images list
-// images[0] = 'https://galleryoftattoosnow.com/JonvonGlahnOldeTownTattooHOSTED/images/gallery/bio%20organic%20arm%20sleeve%20color%20tattoo%20jon%20von%20glahn%20tattoojon.com1.jpg?v=1';
-// images[1] = 'https://inkppl.com/en/assets/components/phpthumbof/cache/180721-2028-5771.2b25590991806d5f8e8489e2406bdc48.jpg'
-// images[2] = 'https://d1kq2dqeox7x40.cloudfront.net/images/posts/20221219_QMKefaLY3730aLC.jpg?w=375';
-
-// function changeImg() {
-//   document.slide.src = images[i];
-
-//   if (i < images.length){
-//     i++;
-//   } else {
-//     i = 0;
-//   }
+scroll.addEventListener("wheel",(evt) => {
+  evt.preventDefault();
+  scroll.scrollLeft += evt.deltaY;
+  scroll.style.scrollBehavior = "auto";
+});
 
 
-// setTimeout("changeImg()",time);
-// }
+Next.addeventListener("click", ()=>{
+  scroller.style.scrollBehavior = "smooth";
+  scroller.scrolLeft += 900;
+});
 
-// window.onload = changeImg;
+back.addeventListener("click", ()=>{
+  scroller.style.scrollBehavior = "smooth";
+  scroller.scrolLeft += 900;
+});
+
+
