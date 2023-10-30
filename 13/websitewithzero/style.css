@@ -239,7 +239,7 @@ body {
 
 
 .Blackwork::-webkit-scrollbar{
-    display: none;
+    /* display: none; */
 }
 
 .Black {
@@ -281,11 +281,6 @@ body {
 #phone{
    margin-top: 1em;
 }
-
-
-
-
-
 
 
 /* TEXT */

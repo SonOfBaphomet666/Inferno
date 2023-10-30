@@ -138,7 +138,7 @@ for (let smoothLink of smoothLinks) {
 // СКРОЛЛ ШОУ
 let scrollContainer = document.querySelector(".gallery");
 let backBtn = document.getElementById("backBtn");
-let backNext = document.getElementById("backNext");
+let nextBtn = document.getElementById("nextBtn");
 
 scrollContainer.addEventListener("wheel",(evt) => {
   evt.preventDefault();
@@ -160,13 +160,13 @@ backBtn.addeventListener("click", ()=>{
 
 // ТУТ НЕ РАБОТАЕТ СКРОЛЛ ДЛЯ ЧЕРНОГО
 let scroller = document.querySelector(".Black");
-let back = document.getElementById("backBtn");
+let Back = document.getElementById("backBtn");
 let Next = document.getElementById("backNext");
 
-scroll.addEventListener("wheel",(evt) => {
+scroller.addEventListener("wheel",(evt) => {
   evt.preventDefault();
-  scroll.scrollLeft += evt.deltaY;
-  scroll.style.scrollBehavior = "auto";
+  scroller.scrollLeft += evt.deltaY;
+  scroller.style.scrollBehavior = "auto";
 });
 
 
@@ -175,7 +175,7 @@ Next.addeventListener("click", ()=>{
   scroller.scrolLeft += 900;
 });
 
-back.addeventListener("click", ()=>{
+Back.addeventListener("click", ()=>{
   scroller.style.scrollBehavior = "smooth";
   scroller.scrolLeft += 900;
 });

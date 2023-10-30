@@ -1,13 +1,17 @@
 
-class Rectangle {
-  constructor(width, height) {
-    this.width = width;
-    this,height = height;
-    this.calculateArea = function() {
-        return this.width * this.height;
+class Animal {
+    constructor() {
     }
   }
-}
+  class Dog extends Animal {
+    constructor() {
+      super();
+    }
+    static bark() {
+       console.log("Woof!")
+    }
+  }
 
-let myRectangle = new Rectangle(5, 6);
-console.log(myRectangle.calculateArea());   
+console.log(bark())
+
+

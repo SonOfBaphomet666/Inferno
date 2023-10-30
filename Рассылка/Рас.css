@@ -7,25 +7,27 @@
 }
 
 
-body{
+body {
     height: 100vh;
     background-color: #000;
-    background-image: url(img/background.jpg);
+    background-image:linear-gradient(to left top,  hsla(46, 85%, 60%, 0.5),
+    rgba(232, 156, 247, 0.5)),
+    url(img/background.jpg);
     background-size: cover;
     background-position: center;
 }
 
-li{
+li {
     list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
     color: #fff;
     font-size: 1.5em;
 }
 
-a:hover{
+a:hover {
     color: orange;
 }
 /* HEADER */
@@ -34,7 +36,8 @@ header {
     padding: 0 2rem;
 }
 
-.navbar{
+
+.navbar {
     width: 100%;
     height: 95px;
     max-width: 1200px;
@@ -42,14 +45,18 @@ header {
     display: flex;
     align-items:center;
     justify-content: space-between;
+    animation-name:  moveNavbar;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+
 }
 
-.navbar .logo a{
+.navbar .logo a {
     font-size: 1.5;
     font-weight: bold;
 }
 
-.navbar .links{
+.navbar .links {
     display: flex;
     gap: 4em;
 }
@@ -130,13 +137,19 @@ section#hero {
     color:#fff;
 }
 
-#hero h1{
+#hero h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
+    animation-name: moveCenter;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
 }
 
-#hero p{
+#hero p {
     font-size: 1.2em;
+    animation-name: moveCenter;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
 }
 
 
@@ -172,6 +185,7 @@ section#hero {
 
 }
 
+
 /* EMAIL */
 .border {
     position: relative;
@@ -179,6 +193,9 @@ section#hero {
     width: 750px;
     border-radius: 40px;
     background-color: rgba(175, 43, 82,.5);
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; 
 }
 
 .border p {
@@ -191,6 +208,7 @@ section#hero {
 #btn {
     position: relative;
     background-color: rgb(214, 144, 13);
+    /* color: #777; */
     width: 7em;
     height: 3em;
     border-radius: 2em;
@@ -198,12 +216,23 @@ section#hero {
     
 }
 
+#btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(231, 221, 221, 0.2);
+}
+
+#btn:active {
+    transform: translateY(-1px);
+}
+
+
 #email {
     margin-top: 120px;
     margin-left: 55px;
     width: 20em;
     height: 2.7em;
     border-radius: 30px;
+
 }
 
 .letter{
@@ -211,6 +240,9 @@ section#hero {
     width: 10em;
     margin-left: 530px;
     margin-top: 15px;
+    animation-name: moveLetter;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
 }
 
 footer {
@@ -220,3 +252,95 @@ footer {
     bottom: 60px;
 }
 
+/* Media border */
+@media (max-width: 768px) {
+     #email {
+        width: 40%;
+        position: relative;
+        top: 20px;
+        right: 20px;
+    }
+
+    #btn {
+        width: 30%;
+        top: 20px;
+        right: 20px;
+    }
+
+    .border {
+        left: 2rem;
+        width: 350px;
+    }
+    .border p { 
+        left: -20px;
+
+    }
+}
+
+
+/* Frames */
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    80% {
+        transform: translate(-1rem);
+
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+
+@keyframes moveLetter {
+    0% {
+        opacity: 0;
+        transform: translate(10rem);
+    }
+
+    80% {
+        transform: translate(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0) rotate(360deg);
+    }
+}
+
+
+@keyframes moveNavbar {
+    0% {
+        opacity: translateY(10rem);
+    }
+
+    80% {
+        transform: translateY(-1rem);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY();
+    }
+}
+
+@keyframes moveCenter {
+    0% {
+        opacity: translateY(10rem);
+    }
+
+    80% {
+        transform: translateY(-1rem);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY();
+    }
+}
