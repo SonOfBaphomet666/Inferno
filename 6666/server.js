@@ -1,17 +1,12 @@
 
-class Animal {
-    constructor() {
-    }
+
+function copySorted(arr) {
+    return arr.slice().sort();
   }
-  class Dog extends Animal {
-    constructor() {
-      super();
-    }
-    static bark() {
-       console.log("Woof!")
-    }
-  }
-
-console.log(bark())
-
-
+  
+  let arr = ["HTML", "JavaScript", "CSS"];
+  
+  let sorted = copySorted(arr);
+  
+  alert( sorted );
+  alert( arr );
