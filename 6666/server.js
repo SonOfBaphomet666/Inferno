@@ -1,30 +1,29 @@
 
+// let vasya = { name: "Вася", age: 25};
+// let petya = { name: "Петя", age: 34};
+// let gog = { name: "Гог", age: 17};
+
+// let arr = [vasya, petya, gog];
+
+let message = [
+  {text: "Hello", from: "John"},
+  {text: "How goes?", from: "John"},
+  {text: "See you soon", from: "Alice"}
+];
+
+let readMap = new WeakMap();
+
+readMap.set(message[0], new Date(2023, 5, 11))
+
+console.log(readMap)
+
+// readMessage.add(message[0]);
+// readMessage.add(message[1]);
+
+// readMessage.add(message[0]);
+
+// console.log("Read message 0: " + readMessage.has(message[0]));
+
+// console.log(
 
 
-function decodeSecretMessage(codePoints) {
-    let decodedMessage = "";
-  
-    for (let i = 0; i < codePoints.length; i++) {
-      const codePoint = codePoints[i];
-      decodedMessage += String.fromCharCode(codePoint);
-    }
-  
-    return decodedMessage;
-  }
-  process.stdin.setEncoding('utf8');
-  
-  let input = '';
-  
-  process.stdin.on('data', (data) => {
-    input += data;
-  });
-  
-  process.stdin.on('end', () => {
-    const codePoints = input.trim().split(/,\s*/).map(Number);
-    const decodedMessage = decodeSecretMessage(codePoints);
-    process.stdout.write(decodedMessage);
-  });
-  
-  const secretMessage = [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100];
-  const decodedMessage = decodeSecretMessage(secretMessage);
-  console.log(decodedMessage); // Выведет: "Hello World"
