@@ -10,11 +10,13 @@
 
 @import "abstracts/components/buttons";
 @import "abstracts/components/composition";
+@import "abstracts/components/story";
 
 @import "abstracts/layout/grid";
 @import "abstracts/layout/header";
 
 @import "abstracts/pages/home";
 
+@import "abstracts/components/bg-video";
 @import "abstracts/components/feature-box";
 @import "abstracts/components/card.scss";
