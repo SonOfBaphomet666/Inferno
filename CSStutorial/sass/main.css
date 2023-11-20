@@ -264,11 +264,10 @@ body {
   overflow: hidden;
   border-radius: 50%;
 }
-@supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+@supports ((-webkit-clip-path: polygon(0 0)) or (clip-path: polygon(0 0))) or (-webkit-clip-path: polygon(0 0)) {
   .story__shape {
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
-    -webkit-shape-outside: circle(50% at 50% 50%);
     shape-outside: circle(50% at 50% 50%);
     border-radius: none;
   }
@@ -337,6 +336,11 @@ body {
   margin-top: 0.7rem;
   display: block;
   transition: all 0.3s;
+}
+.form__input:-moz-placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem);
 }
 .form__input:placeholder-shown + .form__label {
   opacity: 0;
@@ -412,7 +416,7 @@ body {
 }
 
 .col-2-of-3 {
-  width: calc(2 * (100% - 2 * 6rem) / 3 + 6rem);
+  width: calc(2 *((100% - 2 * 6rem) / 3) + 6rem);
 }
 
 .col-1-of-4 {
@@ -420,11 +424,11 @@ body {
 }
 
 .col-2-of-4 {
-  width: calc(2 * (100% - 3 * 6rem) / 4 + 6rem);
+  width: calc(2 *((100% - 3 * 6rem) / 4) + 6rem);
 }
 
 .col-3-of-4 {
-  width: calc(3 * (100% - 3 * 6rem) / 4 + 2 * 6rem);
+  width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem);
 }
 
 .header {
@@ -629,7 +633,8 @@ body {
 .bg-video__content {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .feature-box {
@@ -666,7 +671,6 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   border-radius: 3px;
   overflow: hidden;
@@ -772,6 +776,4 @@ body {
 .card__price-value {
   font-size: 6rem;
   font-weight: 100;
-}
-
-/*# sourceMappingURL=%D1%81%D1%82%D0%B8%D0%BB%D1%8C.css.map */
+}/*# sourceMappingURL=main.css.map */
