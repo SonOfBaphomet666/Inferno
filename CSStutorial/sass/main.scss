@@ -8,19 +8,21 @@
 @import "base/typography";
 @import "base/utilities";
 
-@import "abstracts/components/buttons";
-@import "abstracts/components/composition";
-@import "abstracts/components/story";
-@import "abstracts/components/form";
-
-@import "abstracts/layout/grid";
-@import "abstracts/layout/header";
-@import "abstracts/layout/footer";
-@import "abstracts/layout/_navigation";
+@import "components/buttons";
+@import "components/composition";
+@import "components/story";
+@import "components/form";
+@import "components/popup";
 
 
-@import "abstracts/pages/home";
+@import "layout/grid";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/navigation";
 
-@import "abstracts/components/bg-video";
-@import "abstracts/components/feature-box";
-@import "abstracts/components/card.scss";
+
+@import "pages/home";
+
+@import "components/bg-video";
+@import "components/feature-box";
+@import "components/card.scss";
