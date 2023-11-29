@@ -20,6 +20,10 @@ body {
         font-size: 6rem;
         font-weight: 700;
         letter-spacing: 3.5rem;
+
+        @include respond(phone) {
+            letter-spacing: .5rem;
+        }
     }
 
     animation-name: moveInLeft;
@@ -41,7 +45,7 @@ body {
         animation-timing-function: ease-out;
 
         @include respond(phone) {
-            letter-spacing: .5rem;
+            letter-spacing: 0.5rem;
         }
     }
 }

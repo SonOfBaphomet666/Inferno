@@ -9,24 +9,28 @@
 }
 
 .section-features {
-    padding: 20rem 0;
-    background-image: linear-gradient(to right bottom,
-            rgba($color-primary-light, 0.8),
-            rgba($color-primary-dark, 0.8)),
-        url(/CSStutorial/img/nat-4.jpg);
-    background-size: cover;
-    margin-top: -6rem;
+    background-color: $color-grey-light-1;
 
-    transform: skewY(-7deg);
+    .section-features-block {
+        padding: 20rem 0;
+        background-image: linear-gradient(to right bottom,
+                rgba($color-primary-light, 0.8),
+                rgba($color-primary-dark, 0.8)),
+            url(/CSStutorial/img/nat-4.jpg);
+        background-size: cover;
+        margin-top: -6rem;
 
-    &>* {
-        transform: skewY(7deg);
+        transform: skewY(-7deg);
+
+        &>* {
+            transform: skewY(7deg);
+        }
+
+        @include respond(tab-port) {
+            padding: 10rem 0;
+        }
+
     }
-
-    @include respond(tab-port) {
-        padding: 10rem 0;
-    }
-
 }
 
 .section-tours {
@@ -68,36 +72,36 @@
     box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
 
 
-    @include respond(tab-land) {
-        background-image: linear-gradient(105deg,
-                rgba($color-white, .9) 0%,
-                rgba($color-white, .9) 70%,
-                transparent 70%),
-            url(/CSStutorial/img/nat-10.jpg);
-        background-size: cover;
+    // @include respond(tab-land) {
+    background-image: linear-gradient(105deg,
+            rgba($color-white, .9) 0%,
+            rgba($color-white, .9) 70%,
+            transparent 70%),
+        url(/CSStutorial/img/nat-10.jpg);
+    background-size: cover;
 
+
+    @include respond(tab-port) {
+        background-image: linear-gradient(to right,
+                rgba($color-white, .9) 0%,
+                rgba($color-white, .9) 100%,
+                transparent 100%),
+            url(/CSStutorial/img/nat-10.jpg);
+
+    }
+
+
+    &__form {
+        width: 50%;
+        padding: 6rem;
+
+        @include respond(tab-land) {
+            width: 70%;
+        }
 
         @include respond(tab-port) {
-            background-image: linear-gradient(to right,
-                    rgba($color-white, .9) 0%,
-                    rgba($color-white, .9) 100%,
-                    transparent 100%),
-                url(/CSStutorial/img/nat-10.jpg);
-
-        }
-
-
-        &__form {
-            width: 50%;
-            padding: 6rem;
-
-            @include respond(tab-land) {
-                width: 70%;
-            }
-
-            @include respond(tab-port) {
-                width: 100%;
-            }
+            width: 100%;
         }
     }
+
 }
