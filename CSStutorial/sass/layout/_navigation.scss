@@ -55,9 +55,9 @@
         top: 0;
         left: 0;
         z-index: 1500;
+        width: 0;
 
         opacity: 0;
-        width: 0;
         transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
 
@@ -76,6 +76,7 @@
     }
 
     &__link {
+
         &:link,
         &:visited {
             display: inline-block;
@@ -111,6 +112,11 @@
     }
 
     &__checkbox:checked~&__background {
+        opacity: 1;
+        width: 100%;
+    }
+
+    &__checkbox:checked~&__nav {
         opacity: 1;
         width: 100%;
     }
@@ -157,16 +163,16 @@
         top: 1rem;
     }
 
-    &__checkbox:checked + &__button &__icon {
+    &__checkbox:checked+&__button &__icon {
         background-color: transparent;
     }
 
-    &__checkbox:checked + &__button &__icon::before {
+    &__checkbox:checked+&__button &__icon::before {
         top: 0;
         transform: rotate(135deg);
     }
 
-    &__checkbox:checked + &__button &__icon::after {
+    &__checkbox:checked+&__button &__icon::after {
         top: 0;
         transform: rotate(-135deg);
     }
