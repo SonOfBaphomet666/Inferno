@@ -67,12 +67,7 @@
 // };
 // MOVIE THE END
 
-const now = new Date();
-
-
-console.log(now.setHours(18,40));
-
-console.log(now);
+у
 
 
 
