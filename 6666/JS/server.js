@@ -67,7 +67,6 @@
 // };
 // MOVIE THE END
 
-у
 
 
 
