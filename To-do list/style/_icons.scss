@@ -1,0 +1,30 @@
+.gg-notes {
+    width: 30px;
+    height: 30px;
+}
+
+.input-field .gg-notes {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 24px;
+    color: #707070;
+}
+
+.input-field textarea:focus ~ .gg-notes {
+    color: #7ef782f4;
+}
+
+.container .todoLists {
+    margin-top: 20px;
+}
+
+
+// I am staying here
+.todoLists .list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}

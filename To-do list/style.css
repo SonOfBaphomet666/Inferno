@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Caveat", sans-serif;
+}
+
+body {
+  background-color: rgba(144, 245, 148, 0.9568627451);
+}
+
+.gg-notes {
+  width: 30px;
+  height: 30px;
+}
+
+.input-field .gg-notes {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 24px;
+  color: #707070;
+}
+
+.input-field textarea:focus ~ .gg-notes {
+  color: rgba(126, 247, 130, 0.9568627451);
+}
+
+.container .todoLists {
+  margin-top: 20px;
+}
+
+.todoLists .list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.container {
+  position: relative;
+  max-width: 480px;
+  width: 100%;
+  border-radius: 20px;
+  padding: 25px;
+  margin: 85px auto 0;
+  background-color: #fff;
+  box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.3);
+}
+
+.container .input-field {
+  position: relative;
+  height: 70px;
+  width: 100%;
+}
+
+.input-field textarea {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 21px;
+  font-weight: 400;
+  border-radius: 10px;
+  padding: 18px 45px 18px 15px;
+  border: 1px solid #ccc;
+  resize: none;
+}
+
+.input-field textarea:focus {
+  border-color: rgba(126, 247, 130, 0.9568627451);
+}
+
+textarea::-weblit-scrollbar {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */
