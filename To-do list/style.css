@@ -111,4 +111,30 @@ textarea::-weblit-scrollbar {
   display: none;
 }
 
+.container .pending-tasks {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.pending-tasks span {
+  color: #333;
+}
+
+.pending-tasks .clear-button {
+  padding: 6px 12px;
+  outline: none;
+  border: none;
+  background-color: rgba(126, 247, 130, 0.9568627451);
+  color: #fff;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.clear-button:hover {
+  background-color: rgba(85, 239, 90, 0.9568627451);
+}
+
 /*# sourceMappingURL=style.css.map */

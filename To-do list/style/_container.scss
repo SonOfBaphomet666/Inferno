@@ -34,3 +34,30 @@
 textarea::-weblit-scrollbar {
     display: none;
 }
+
+.container .pending-tasks {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.pending-tasks span {
+    color: #333;
+}
+
+.pending-tasks .clear-button {
+    padding: 6px 12px;
+    outline: none;
+    border: none;
+    background-color: #7ef782f4;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.clear-button:hover{
+    background-color: #55ef5af4;
+
+}
