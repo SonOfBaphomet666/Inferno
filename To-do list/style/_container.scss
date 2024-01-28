@@ -55,9 +55,16 @@ textarea::-weblit-scrollbar {
     font-size: 14px;
     border-radius: 4px;
     cursor: pointer;
+    pointer-events: none;
+    white-space: nowrap;
 }
 
 .clear-button:hover{
     background-color: #55ef5af4;
+}
 
+@media  screen and (max-width:350px) {
+    .container {
+        padding: 25px 10px;
+    }
 }
