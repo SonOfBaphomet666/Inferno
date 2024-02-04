@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from './FinishedQuiz.css'
 import Button from '../UI/Button/Button'
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 const FinishedQuiz = props => {
   const successCount = Object.keys(props.results).reduce((total, key) => {
@@ -16,7 +16,7 @@ const FinishedQuiz = props => {
   return (
     <div className={classes.FinishedQuiz}>
       <ul>
-        {props.quiz.map((quizItem, index) => {
+        { props.quiz.map((quizItem, index) => {
           const cls = [
             'fa',
             props.results[quizItem.id] === 'error' ? 'fa-times' : 'fa-check',
@@ -33,7 +33,7 @@ const FinishedQuiz = props => {
             </li>
           )
 
-        })}
+        }) }
       </ul>
 
       <p>Правильно {successCount} из {props.quiz.length}</p>

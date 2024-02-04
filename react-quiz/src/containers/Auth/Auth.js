@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import classes from './Auth.css'
 import Button from '../../components/UI/Button/Button'
 import Input from '../../components/UI/Input/Input'
-import is, { object } from 'is_js'
+import is from 'is_js'
 
 export default class Auth extends Component {
 
@@ -13,11 +13,11 @@ export default class Auth extends Component {
         value: '',
         type: 'email',
         label: 'Email',
-        errorMessage: 'Введите корретный email',
+        errorMessage: 'Введите корректный email',
         valid: false,
         touched: false,
         validation: {
-          requiered: true,
+          required: true,
           email: true
         }
       },
@@ -25,11 +25,11 @@ export default class Auth extends Component {
         value: '',
         type: 'password',
         label: 'Пароль',
-        errorMessage: 'Введите корретный пароль',
+        errorMessage: 'Введите корректный пароль',
         valid: false,
         touched: false,
         validation: {
-          requiered: true,
+          required: true,
           minLength: 6
         }
       }
@@ -55,7 +55,7 @@ export default class Auth extends Component {
 
     let isValid = true
 
-    if (validation.requiered) {
+    if (validation.required) {
       isValid = value.trim() !== '' && isValid
     }
 
@@ -64,7 +64,7 @@ export default class Auth extends Component {
     }
 
     if (validation.minLength) {
-      isValid = value.minLength >= validation.minLength && isValid
+      isValid = value.length >= validation.minLength && isValid
     }
 
     return isValid
@@ -104,7 +104,7 @@ export default class Auth extends Component {
           label={control.label}
           shouldValidate={!!control.validation}
           errorMessage={control.errorMessage}
-          onChabge={event => this.onChangeHandler(event, controlName)}
+          onChange={event => this.onChangeHandler(event, controlName)}
         />
       )
     })
@@ -118,7 +118,7 @@ export default class Auth extends Component {
 
           <form onSubmit={this.submitHandler} className={classes.AuthForm}>
 
-            {this.renderInputs()}
+            { this.renderInputs() }
 
             <Button
               type="success"
