@@ -1,18 +1,18 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import classes from './QuizCreator.css'
 import Button from '../../components/UI/Button/Button'
 import Input from '../../components/UI/Input/Input'
 import Select from '../../components/UI/Select/Select'
-import { createControl, validate, validateForm } from '../../form/formFramework'
+import {createControl, validate, validateForm} from '../../form/formFramework'
 import Auxiliary from '../../hoc/Auxiliary/Auxiliary'
-import axios from 'axios'
+import axios from '../../axios/axios-quiz'
 
 function createOptionControl(number) {
   return createControl({
     label: `Вариант ${number}`,
     errorMessage: 'Значение не может быть пустым',
     id: number
-  }, { required: true })
+  }, {required: true})
 }
 
 function createFormControls() {
@@ -20,7 +20,7 @@ function createFormControls() {
     question: createControl({
       label: 'Введите вопрос',
       errorMessage: 'Вопрос не может быть пустым'
-    }, { required: true }),
+    }, {required: true}),
     option1: createOptionControl(1),
     option2: createOptionControl(2),
     option3: createOptionControl(3),
@@ -47,17 +47,17 @@ export default class QuizCreator extends Component {
     const quiz = this.state.quiz.concat()
     const index = quiz.length + 1
 
-    const { question, option1, option2, option3, option4 } = this.state.formControls
+    const {question, option1, option2, option3, option4} = this.state.formControls
 
     const questionItem = {
       question: question.value,
       id: index,
       rightAnswerId: this.state.rightAnswerId,
       answers: [
-        { text: option1.value, id: option1.id },
-        { text: option2.value, id: option2.id },
-        { text: option3.value, id: option3.id },
-        { text: option4.value, id: option4.id }
+        {text: option1.value, id: option1.id},
+        {text: option2.value, id: option2.id},
+        {text: option3.value, id: option3.id},
+        {text: option4.value, id: option4.id}
       ]
     }
 
@@ -75,17 +75,19 @@ export default class QuizCreator extends Component {
     event.preventDefault()
 
     try {
-    await axios.post('https://react-quiz-dd727-default-rtdb.firebaseio.com/quizes.json', this.state.quiz)
+      await axios.post('/quizes.json', this.state.quiz)
+
       this.setState({
         quiz: [],
         isFormValid: false,
         rightAnswerId: 1,
-        formControls: createControl()
+        formControls: createFormControls()
       })
-  } catch (e) {
-    console.log(e);
+
+    } catch (e) {
+      console.log(e)
+    }
   }
-}
 
   changeHandler = (value, controlName) => {
     const formControls = { ...this.state.formControls }
@@ -118,7 +120,7 @@ export default class QuizCreator extends Component {
             errorMessage={control.errorMessage}
             onChange={event => this.changeHandler(event.target.value, controlName)}
           />
-          {index === 0 ? <hr /> : null}
+          { index === 0 ? <hr /> : null }
         </Auxiliary>
       )
     })
@@ -136,10 +138,10 @@ export default class QuizCreator extends Component {
       value={this.state.rightAnswerId}
       onChange={this.selectChangeHandler}
       options={[
-        { text: 1, value: 1 },
-        { text: 2, value: 2 },
-        { text: 3, value: 3 },
-        { text: 4, value: 4 }
+        {text: 1, value: 1},
+        {text: 2, value: 2},
+        {text: 3, value: 3},
+        {text: 4, value: 4}
       ]}
     />
 
@@ -150,9 +152,9 @@ export default class QuizCreator extends Component {
 
           <form onSubmit={this.submitHandler}>
 
-            {this.renderControls()}
+            { this.renderControls() }
 
-            {select}
+            { select }
 
             <Button
               type="primary"

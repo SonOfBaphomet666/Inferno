@@ -1,10 +1,11 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import classes from './QuizList.css'
-import { NavLink } from 'react-router-dom'
-import axios from 'axios'
+import {NavLink} from 'react-router-dom'
 import Loader from '../../components/UI/Loader/Loader'
+import axios from '../../axios/axios-quiz'
 
 export default class QuizList extends Component {
+
   state = {
     quizes: [],
     loading: true
@@ -17,7 +18,7 @@ export default class QuizList extends Component {
           key={quiz.id}
         >
           <NavLink to={'/quiz/' + quiz.id}>
-           {quiz.name}
+            {quiz.name}
           </NavLink>
         </li>
       )
@@ -26,9 +27,10 @@ export default class QuizList extends Component {
 
   async componentDidMount() {
     try {
-      const response = await axios.get('https://react-quiz-dd727-default-rtdb.firebaseio.com/quiz')
+      const response = await axios.get('/quizes.json')
 
       const quizes = []
+
       Object.keys(response.data).forEach((key, index) => {
         quizes.push({
           id: key,
@@ -40,7 +42,7 @@ export default class QuizList extends Component {
         quizes, loading: false
       })
     } catch (e) {
-      console.log(e);
+      console.log(e)
     }
   }
 
@@ -52,11 +54,12 @@ export default class QuizList extends Component {
 
           {
             this.state.loading
-            ? <Loader />
-            : <ul>
-            {this.renderQuizes()}
-          </ul>
-  }
+              ? <Loader />
+              : <ul>
+                  { this.renderQuizes() }
+                </ul>
+          }
+
         </div>
       </div>
     )
