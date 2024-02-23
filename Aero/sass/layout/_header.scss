@@ -1,0 +1,20 @@
+.header {
+    height: 75vh;
+    background-image: linear-gradient(to right top,
+            rgba($color-primary-dark, 0.5),
+            rgba($color-primary-light, 0.8));
+    background-size: cover;
+    background-position: top;
+    position: relative;
+
+    &__img {
+        width: 56.8%;
+        height: 30%;
+    }
+
+    &__logo {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+    }
+}
