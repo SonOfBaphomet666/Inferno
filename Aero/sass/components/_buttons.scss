@@ -1,0 +1,233 @@
+// My button
+
+// .btn {
+//     &,
+//     &:link,
+//     &:visited {
+//         text-transform: uppercase;
+//         text-decoration: none;
+//         padding: 24px 64px;
+//         display: inline-block;
+//         border-radius: 30px;
+
+//     }
+
+//     &--white {
+//         background-color: $color-white;
+//         color: $color-green-dark;
+
+//         &::after {
+//             background-color: #ffffff;
+//         }
+//     }
+// }
+
+// 3D button
+
+// .btn {
+
+//     & *,
+//     & :after,
+//     & :before,
+//     &:after,
+//     &:before {
+//         border: 0 solid;
+//         box-sizing: border-box;
+//     }
+
+//     & {
+//         -webkit-tap-highlight-color: transparent;
+//         -webkit-appearance: button;
+//         background-color: #000;
+//         background-image: none;
+//         color: #fff;
+//         cursor: pointer;
+//         font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+//             Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+//             Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+//         font-size: 100%;
+//         line-height: 1.5;
+//         margin: 0;
+//         -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+//         padding: 0;
+//     }
+
+//     &:disabled {
+//         cursor: default;
+//     }
+
+//     &:-moz-focusring {
+//         outline: auto;
+//     }
+
+//     & svg {
+//         display: block;
+//         vertical-align: middle;
+//     }
+
+//     & [hidden] {
+//         display: none;
+//     }
+
+//     & {
+//         text-decoration: none;
+//         --progress: 15px;
+//         background: #fff;
+//         bottom: var(--progress);
+//         box-sizing: border-box;
+//         color: #000;
+//         //   display: block;
+//         font-weight: 900;
+//         -webkit-mask-image: none;
+//         padding: 1.2rem 3rem;
+//         perspective: 800px;
+//         position: relative;
+//         text-transform: uppercase;
+//         transform: rotateX(55deg) rotate(25deg);
+//         transform-style: preserve-3d;
+//         transition: bottom 0.2s;
+//     }
+
+//     &:after,
+//     &:before {
+//         content: "";
+//         display: block;
+//         position: absolute;
+//         transform-origin: 0 0;
+//     }
+
+//     &:before {
+//         background: #eee;
+//         height: var(--progress);
+//         left: 0;
+//         top: 100%;
+//         transform: rotateX(-90deg);
+//         transition: height 0.2s;
+//         width: 100%;
+//     }
+
+//     &:after {
+//         background: #ccc;
+//         height: 100%;
+//         left: 100%;
+//         top: 0;
+//         transform: rotateY(90deg);
+//         transition: width 0.2s;
+//         width: var(--progress);
+//     }
+
+//     &:active {
+//         --progress: 0px;
+//     }
+// }
+
+
+.btn{
+& *,
+& :after,
+& :before,
+&:after,
+&:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+& {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #000;
+  background-image: none;
+  color: #fff;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+  text-transform: uppercase;
+}
+&:disabled {
+  cursor: default;
+}
+&:-moz-focusring {
+  outline: auto;
+}
+& svg {
+  vertical-align: middle;
+}
+& [hidden] {
+  display: none;
+}
+& {
+  --thickness: 0.3rem;
+  --roundness: 1.2rem;
+  --color: #eff6ff;
+  --opacity: 0.6;
+  -webkit-backdrop-filter: blur(100px);
+  backdrop-filter: blur(100px);
+  background: none;
+  background: hsla(0, 0%, 100%, 0.2);
+  border: none;
+  border-radius: var(--roundness);
+  color: var(--color);
+  cursor: pointer;
+  display: block;
+  font-family: Poppins, "sans-serif";
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.8rem 3rem;
+  position: relative;
+}
+&:hover {
+  background: hsla(0, 0%, 100%, 0.3);
+  filter: brightness(1.2);
+}
+&:active {
+  --opacity: 0;
+  background: hsla(0, 0%, 100%, 0.1);
+}
+& svg {
+  border-radius: var(--roundness);
+  display: block;
+  filter: url(#glow);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+& rect {
+  fill: none;
+  stroke: var(--color);
+  stroke-width: var(--thickness);
+  rx: var(--roundness);
+  stroke-linejoin: round;
+  stroke-dasharray: 185%;
+  stroke-dashoffset: 80;
+  -webkit-animation: snake 2s linear infinite;
+  animation: snake 2s linear infinite;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.2s;
+  width: 100%;
+}
+&:hover rect {
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+  opacity: var(--opacity);
+}
+@-webkit-keyframes snake {
+  to {
+    stroke-dashoffset: 370%;
+  }
+}
+@keyframes snake {
+  to {
+    stroke-dashoffset: 370%;
+  }
+}
+}

@@ -2,19 +2,26 @@
     height: 75vh;
     background-image: linear-gradient(to right top,
             rgba($color-primary-dark, 0.5),
-            rgba($color-primary-light, 0.8));
+            rgba($color-primary-light, 0.8)),
+            url(/Aero/img/road_header.jpg);
     background-size: cover;
     background-position: top;
     position: relative;
 
-    &__img {
-        width: 56.8%;
-        height: 30%;
-    }
-
     &__logo {
         position: absolute;
-        width: 150px;
-        height: 150px;
+        width: 100px;
+        height: 100px;
+        margin-top: 40px;
+        margin-left: 40px;
+    }
+
+    &__text-box {
+        position: absolute;
+        text-align: center;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
     }
 }

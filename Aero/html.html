@@ -26,13 +26,31 @@
     <header class="header">
         <div class="header__logo-box">
             <img src="./img/logo_header.png" alt="logo" class="header__logo">
-            <img src="./img/header_house.jpg" alt="house" class="header__img">
         </div>
         <div class="header__text-box">
             <h1 class="heading-primary">
                 <span class="heading-primary--main">Freedom</span>
                 <span class="heading-primary--sub">This is where your life begins</span>
             </h1>
+
+            <a href="#section-tours" class="btn btn--white btn--animated">Explore our way</a>
+            <!-- Разобраться с кнопкой https://ui-buttons.web.app/glow-button-->
+            <svg>
+                <defs>
+                  <filter id="glow">
+                    <fegaussianblur result="coloredBlur" stddeviation="5"></fegaussianblur>
+                    <femerge>
+                      <femergenode in="coloredBlur"></femergenode>
+                      <femergenode in="coloredBlur"></femergenode>
+                      <femergenode in="coloredBlur"></femergenode>
+                      <femergenode in="SourceGraphic"></femergenode>
+                    </femerge>
+                  </filter>
+                </defs>
+                <rect />
+              </svg>
+            <!-- </button> -->
+
         </div>
     </header>
 
