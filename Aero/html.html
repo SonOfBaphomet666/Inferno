@@ -20,7 +20,12 @@
 <body>
 
     <div class="navigation">
-
+        <ul class="navigation__nav">
+            <li class="navigation__list"><a href="#Home" class="navigation__link">Home</a></li>
+            <li class="navigation__list"><a href="#Prise" class="navigation__link">Prise</a></li>
+            <li class="navigation__list"><a href="#Contact" class="navigation__link">Contact</a></li>
+            <li class="navigation__list"><a href="#About" class="navigation__link">About</a></li>
+        </ul>
     </div>
 
     <header class="header">
@@ -33,24 +38,7 @@
                 <span class="heading-primary--sub">This is where your life begins</span>
             </h1>
 
-            <a href="#section-tours" class="btn btn--white btn--animated">Explore our way</a>
-            <!-- Разобраться с кнопкой https://ui-buttons.web.app/glow-button-->
-            <svg>
-                <defs>
-                  <filter id="glow">
-                    <fegaussianblur result="coloredBlur" stddeviation="5"></fegaussianblur>
-                    <femerge>
-                      <femergenode in="coloredBlur"></femergenode>
-                      <femergenode in="coloredBlur"></femergenode>
-                      <femergenode in="coloredBlur"></femergenode>
-                      <femergenode in="SourceGraphic"></femergenode>
-                    </femerge>
-                  </filter>
-                </defs>
-                <rect />
-              </svg>
-            <!-- </button> -->
-
+            <a href="#section-tours" class="btn btn--white btn--animated"><span>Explore our way</span></a>
         </div>
     </header>
 

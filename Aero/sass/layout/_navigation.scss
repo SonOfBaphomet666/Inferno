@@ -1,0 +1,18 @@
+.navigation {
+    &__nav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        justify-content: end; //don't work
+    }
+
+    &__list {
+        display: inline;
+    }
+
+    &__link {
+        text-decoration: none; 
+        justify-content: start;
+    }
+}
