@@ -1,18 +1,43 @@
 .navigation {
-    &__nav {
-        list-style-type: none;
         margin: 0;
         padding: 0;
-        text-align: center;
-        justify-content: end; //don't work
-    }
+        background-color: $color-primary-light;
+
+    // &__nav {
+    //     height: 5vh;
+    //     text-align: center;
+    // }
 
     &__list {
-        display: inline;
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px;
+        overflow: hidden;
+        height: 5vh;
+        text-align: center;
     }
 
     &__link {
-        text-decoration: none; 
-        justify-content: start;
+        text-decoration: none;
     }
+
+    &__link:hover {
+        background-color: rgb(255, 255, 255);
+    }
+
+    &__item {
+        display: inline;
+        background-color: $color-green-dark-2;
+        margin: 10px;
+    }
+
+    &__logo {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+
+
 }
