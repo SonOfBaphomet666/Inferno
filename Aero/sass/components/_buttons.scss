@@ -133,31 +133,31 @@
     box-sizing: border-box;
   }
 
-    -webkit-tap-highlight-color: transparent;
-    -webkit-appearance: button;
-    background-color: #000;
-    background-image: none;
-    color: #fff;
-    cursor: pointer;
-   font-family: "Roboto";
-    font-size: 100%;
-    font-weight: 500;
-    line-height: 1.5;
-    margin: 0;
-    -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
-    padding: 0;
-    text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #000;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Roboto";
+  font-size: 100%;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+  text-decoration: none;
 
-    background: none;
-    border-radius: 999px;
-    box-sizing: border-box;
-    display: block;
-    overflow: hidden;
-    padding: 1.2rem 3rem;
-    position: relative; // relative
-    text-transform: uppercase;
-    // margin-left: 190px;
-    
+  background: none;
+  border-radius: 999px;
+  box-sizing: border-box;
+  display: block;
+  overflow: hidden;
+  padding: 1.2rem 3rem;
+  position: relative; // relative
+  text-transform: uppercase;
+  // margin-left: 190px;
+
 
 
   &:disabled {
@@ -334,5 +334,31 @@
     to {
       opacity: 1;
     }
+  }
+}
+
+
+.btn-text {
+
+  &:link,
+  &:visited {
+    font-size: 16px;
+    color: $color-primary;
+    display: inline-block;
+    text-decoration: none;
+    text-decoration-line: underline;
+    padding: 3px;
+    transition: all .2s;
+  }
+
+  &:hover {
+    background-color: $color-primary;
+    color: $color-white;
+    box-shadow: 0 16px 32px rgba($color-black, .15);
+  }
+
+  &:active {
+    box-shadow: 0 .5rem 1rem rgba($color-black, .15);
+    transform: translateY(0);
   }
 }
