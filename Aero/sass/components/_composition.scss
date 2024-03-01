@@ -2,7 +2,7 @@
     position: relative;
 
     &__photo {
-        width: 45%;
+        width: 25%;
         box-shadow: 0 1.5rem 4rem rgb($color-black, .6);
         border-radius: 10px;
         position: absolute;
@@ -12,8 +12,8 @@
     }
 
     &--p1 {
-        left: 0;
-        top: -2rem;
+        left: 0rem;
+        top: -32px;
     }
 
     &--p2 {
@@ -22,14 +22,14 @@
     }
 
     &--p3 {
-        left: 20%;
+        left: 30%;
         top: 160px;
     }
 
     &:hover{
-        outline: 1.5rem solid $color-primary;
+        // outline: 16px solid $color-primary;
         transform: scale(1.05) translateY(-.5rem);
-        box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+        // box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
         z-index: 20;
     }
 

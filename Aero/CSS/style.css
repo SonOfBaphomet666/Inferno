@@ -98,9 +98,6 @@ body {
 .paragraphs {
   font-size: 16px;
 }
-.paragraphs:not(:last-child) {
-  margin-bottom: 3rem;
-}
 
 .u-center-text {
   text-align: center !important;
@@ -309,7 +306,7 @@ body {
   position: relative;
 }
 .composition__photo {
-  width: 45%;
+  width: 25%;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.6);
   border-radius: 10px;
   position: absolute;
@@ -318,21 +315,19 @@ body {
   outline-offset: 2rem;
 }
 .composition--p1 {
-  left: 0;
-  top: -2rem;
+  left: 0rem;
+  top: -32px;
 }
 .composition--p2 {
   right: 0;
   top: 32px;
 }
 .composition--p3 {
-  left: 20%;
+  left: 30%;
   top: 160px;
 }
 .composition:hover {
-  outline: 1.5rem solid #0b3086;
   transform: scale(1.05) translateY(-0.5rem);
-  box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
   z-index: 20;
 }
 .composition:hover .composition__photo:not(:hover) {
@@ -341,8 +336,7 @@ body {
 
 .section-about {
   background-color: #777;
-  padding: 25rem 0;
-  margin-top: -30vh;
+  padding: 400px 0;
 }
 
 /*# sourceMappingURL=style.css.map */
