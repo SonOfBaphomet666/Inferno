@@ -14,17 +14,12 @@
 }
 
 .navigation {
-  margin: 0;
+  margin: auto;
   padding: 0;
   background-color: #0c4d8f;
-}
-.navigation__list {
-  list-style-type: none;
-  padding: 0px;
-  margin: 0px;
-  overflow: hidden;
-  height: 5vh;
-  text-align: center;
+  height: 100px;
+  display: flex;
+  justify-content: center;
 }
 .navigation__link {
   text-decoration: none;
@@ -38,39 +33,21 @@
   margin: 10px;
 }
 .navigation__logo {
-  position: absolute;
+  display: flex;
+  justify-content: start;
   width: 40px;
   height: 40px;
-  margin-left: 20px;
   margin-top: 10px;
 }
 
 .row {
   max-width: 1824px;
   margin: 0 auto;
+  grid-template-columns: repeat(2, 270px);
 }
 .row:not(:last-child) {
   margin-bottom: 128px;
 }
-.row .col-1-of-2 {
-  width: calc((100% - 96px) / 2);
-}
-.row .col-1-of-3 {
-  width: calc((100% - 2 * 96px) / 3);
-}
-.row .col-2of-3 {
-  width: calc(2 * (100% - 2 * 96px) / 3 + 96px);
-}
-.row .col-1-of-4 {
-  width: calc((100% - 3 * 96px) / 4);
-}
-.row .col-2-of-4 {
-  width: calc(2 * (100% - 3 * 96px) / 4 + 96px);
-}
-.row .col-3-of-4 {
-  width: calc(3 * (100% - 3 * 96px) / 4 + 2 * 96px);
-}
-
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -366,6 +343,15 @@ body {
 .card__side {
   height: 832px;
   width: 100%;
+  transition: all 0.8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.15);
 }
 
 .feature-box {

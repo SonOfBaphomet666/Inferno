@@ -1,20 +1,13 @@
 .navigation {
-        margin: 0;
-        padding: 0;
-        background-color: $color-primary-light;
-
-    // &__nav {
-    //     height: 5vh;
-    //     text-align: center;
-    // }
+    margin: auto;
+    padding: 0;
+    background-color: $color-primary-light;
+    height: 100px;
+    display: flex;
+    justify-content: center;
 
     &__list {
-        list-style-type: none;
-        padding: 0px;
-        margin: 0px;
-        overflow: hidden;
-        height: 5vh;
-        text-align: center;
+
     }
 
     &__link {
@@ -32,10 +25,10 @@
     }
 
     &__logo {
-        position: absolute;
+        display: flex;
+        justify-content: start;
         width: 40px;
         height: 40px;
-        margin-left: 20px;
         margin-top: 10px;
     }
 
