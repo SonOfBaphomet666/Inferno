@@ -13,9 +13,9 @@
 
 .column-flex {
     display: flex;
-    justify-content: center;
-    align-content: center;
-    width: 500px !important;
-    background-color: red;
+    width: 485px;
     flex-direction: column;
+    height: 600px;
+    justify-content: center;
+    margin-top: 60px;
 }

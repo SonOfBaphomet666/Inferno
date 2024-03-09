@@ -344,7 +344,9 @@
   &:visited {
     font-size: 16px;
     color: $color-primary;
-    display: inline-block;
+    display: flex;
+    margin-top: 20px;
+    width: 22%;
     text-decoration: none;
     text-decoration-line: underline;
     padding: 3px;
