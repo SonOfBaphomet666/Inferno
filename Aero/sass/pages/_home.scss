@@ -1,9 +1,11 @@
 .section-about {
-    background-color: #777;
+    background-color:#1e5af2;
     padding: 50px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 96.5%, 0% 96.2%);
+
 
     &__side {
         width: 50%;
@@ -23,9 +25,14 @@
                 rgba($color-green-dark, 0.8),
                 rgba($color-green-dark-2, 1)),
                 url(/Aero/img/bridge_body.jpg);
-    }
+
     background-size: cover;
     margin-top: -46px;
+    transform: skewY(4deg);
 
+    &>* {
+        transform: skewY(-4deg);
+    }
+    }
     // transform: skewY(2deg);
 }
