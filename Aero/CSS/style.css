@@ -402,9 +402,14 @@ body {
   --dark: hsl(var(--hue), 25%, 10%);
   --grey: hsl(0, 0%, 50%);
   width: 410px;
-  height: 600px;
+  height: 620px;
   margin: 60px;
   perspective: 1000px;
+}
+
+.flip-card-container:hover .card,
+.flip-card-container:focus-within .card {
+  transform: rotateY(180deg);
 }
 
 .card {
@@ -425,10 +430,6 @@ body {
   /* ul */
   /* li */
   /* button */
-}
-.card .flip-card-container:hover .card,
-.card .flip-card-container:focus-within .card {
-  transform: rotateY(180deg);
 }
 .card__front, .card__back {
   width: 100%;
@@ -516,9 +517,9 @@ body {
   top: 34%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(18deg);
-  width: 100%;
+  width: 110%;
   height: 12px;
-  border: 1px solid var(--primary);
+  border: 2px solid var(--primary);
   border-left-color: transparent;
   border-right-color: transparent;
   transition: 0.1s;
@@ -571,7 +572,7 @@ body {
   letter-spacing: 2px;
   padding: 9px 20px;
   border: 1px solid var(--grey);
-  border-radius: 1000px;
+  border-radius: 100px;
   background: transparent;
   transition: 0.3s;
   cursor: pointer;
@@ -601,7 +602,7 @@ body {
 }
 .design-container__design {
   display: block;
-  background: var(--grey);
+  background: var(--dark);
   position: absolute;
   opacity: var(--op);
   transition: 0.3s;
