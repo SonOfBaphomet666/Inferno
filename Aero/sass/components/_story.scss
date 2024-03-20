@@ -1,0 +1,89 @@
+.story {
+
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    font-size: 18px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, .66);
+    transition: box-shadow 0.2s ease, transform 0.2s;
+
+    &:hover {
+        box-shadow: 0 34px 32px -33px rgba(0, 0, 0, .18);
+    }
+    &__::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(-70deg, #424242, transparent 50%);
+        opacity: 0.07;;
+    }
+
+    // https://codepen.io/rabakilgur/pen/RYpVQz - this card's. VPN 
+
+
+    // Old sryle
+    // width: 60%;
+    // margin: 0 auto;
+    // box-shadow: 0 48px 96px rgba($color-black, .1);
+    // background-color: rgba($color-white, .6);
+    // border-radius: 3px;
+    // padding: 96px;
+    // padding-left: 144px;
+    // font-size: 16px;
+    // transform: skewX(12deg);
+
+
+
+    &__shape {
+        // width: 240px;
+        // height: 240px;
+        // float: left;
+        // transform: translateX(-48px) skewX(12deg);
+        // position: relative;
+        // overflow: hidden;
+        // border-radius: 50%;
+
+        // @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+        //     -webkit-clip-path: circle(50% at 50% 50%);
+        //     clip-path: circle(50% at 50% 50%);
+        //     -webkit-shape-outside: circle(50% at 50% 50%);
+        //     shape-outside: circle(50% at 50% 50%);
+        //     border-radius: none;
+        // }
+    }
+
+    &__img {
+        height: 100%;
+        width: 10%;
+        transform: translateX(-64px) scale(1.4);
+        backface-visibility: hidden;
+        transition: all .5s;
+    }
+
+    &__text {
+        // transform: skewX(12deg);
+    }
+
+    &__caption {
+        // position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, 20%);
+        // color: $color-white;
+        // text-transform: uppercase;
+        // font-size: 27.2px;
+        // text-align: center;
+        // opacity: 0;
+        // transition: all .5s;
+        // backface-visibility: hidden;
+    }
+}
