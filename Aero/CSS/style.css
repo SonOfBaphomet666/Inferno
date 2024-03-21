@@ -385,7 +385,19 @@ body {
   transform: scale(0.95);
 }
 
-.story {
+.story-container {
+  margin: 50px 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+}
+
+.story-container,
+.story-container * {
+  box-sizing: border-box;
+}
+
+.story-card {
   position: relative;
   width: 100%;
   height: 300px;
@@ -396,13 +408,14 @@ body {
   font-size: 18px;
   overflow: hidden;
   cursor: pointer;
-  box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
-  transition: box-shadow 0.2s ease, transform 0.2s;
+  box-shadow: 0 10px 21px -12px rgba(0, 0, 0, 0.66);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
-.story:hover {
+.story-card__:hover {
   box-shadow: 0 34px 32px -33px rgba(0, 0, 0, 0.18);
+  transform: translate(0px, -3px);
 }
-.story__::before {
+.story-card__::before {
   content: "";
   position: absolute;
   top: 0;
@@ -412,13 +425,211 @@ body {
   background-image: linear-gradient(-70deg, #424242, transparent 50%);
   opacity: 0.07;
 }
-.story__img {
-  height: 100%;
-  width: 10%;
-  transform: translateX(-64px) scale(1.4);
-  backface-visibility: hidden;
-  transition: all 0.5s;
+.story-card__:nth-child(2n)::before {
+  background-image: linear-gradient(-250deg, #424242, transparent 50%);
 }
+.story-card__innerbox {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.story-card__img {
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  top: 0;
+  left: 0;
+  transition: transform 0.2s ease;
+}
+.story-card__:nth-child(2n) .story-card__img {
+  left: initial;
+  right: 0;
+}
+.story-card__:hover .story-card__img {
+  transform: scale(1.05) rotate(1deg);
+}
+.story-card__:hover .story-card__bar {
+  width: 70px;
+}
+.story-card__textbox {
+  position: absolute;
+  top: 7%;
+  bottom: 7%;
+  left: 430px;
+  width: calc(100% - 470px);
+  font-size: 17px;
+}
+.story-card__:nth-child(2n) .story-card__textbox {
+  left: initial;
+  right: 430px;
+}
+.story-card__textbox::before, .story-card__textbox::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background: rgba(255, 0, 0, 0.7333333333);
+  background: #fff;
+  top: -20%;
+  left: -55px;
+  height: 140%;
+  width: 60px;
+  transform: rotate(8deg);
+}
+.story-card:nth-child(2n) .story-card__textbox::before {
+  display: none;
+}
+.story-card__textbox::after {
+  display: none;
+  left: initial;
+  right: -55px;
+}
+.story-card:nth-child(2n) .story-card__textbox::after {
+  display: block;
+}
+.story-card__textbox * {
+  position: relative;
+}
+.story-card__title {
+  font-family: "Voces", "Open Sans", arial, sans-serif;
+  font-size: 24px;
+}
+.story-card__subtitle {
+  font-family: "Voces", "Open Sans", arial, sans-serif;
+  color: #888;
+}
+.story-card__bar {
+  left: -2px;
+  width: 50px;
+  height: 5px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background-color: #424242;
+  transition: width 0.2s ease;
+}
+.story-card__blue .story-card__bar {
+  background-color: #0088FF;
+}
+.story-card__blue::before {
+  background-image: linear-gradient(-70deg, #0088FF, transparent 50%);
+}
+.story-card__blue:nth-child(2n)::before {
+  background-image: linear-gradient(-250deg, #0088FF, transparent 50%);
+}
+.story-card__red .story-card__bar {
+  background-color: #D62F1F;
+}
+.story-card__red::before {
+  background-image: linear-gradient(-70deg, #D62F1F, transparent 50%);
+}
+.story-card__red:nth-child(2n)::before {
+  background-image: linear-gradient(-250deg, #D62F1F, transparent 50%);
+}
+.story-card__green .story-card__bar {
+  background-color: #40BD00;
+}
+.story-card__green::before {
+  background-image: linear-gradient(-70deg, #40BD00, transparent 50%);
+}
+.story-card__green:nth-child(2n)::before {
+  background-image: linear-gradient(-250deg, #40BD00, transparent 50%);
+}
+.story-card__yellow .story-card__bar {
+  background-color: #F5AF41;
+}
+.story-card__yellow::before {
+  background-image: linear-gradient(-70deg, #F5AF41, transparent 50%);
+}
+.story-card__yellow:nth-child(2n)::before {
+  background-image: linear-gradient(-250deg, #F5AF41, transparent 50%);
+}
+.story-card__orange .story-card__bar {
+  background-color: #FF5722;
+}
+.story-card__orange::before {
+  background-image: linear-gradient(-70deg, #FF5722, transparent 50%);
+}
+.story-card__orange:nth-child(2n)::before {
+  background-image: linear-gradient(-250deg, #FF5722, transparent 50%);
+}
+.story-card__brown .story-card__bar {
+  background-color: #C49863;
+}
+.story-card__brown::before {
+  background-image: linear-gradient(-70deg, #C49863, transparent 50%);
+}
+.story-card__brown:nth-child(2n)::before {
+  background-image: linear-gradient(-250deg, #C49863, transparent 50%);
+}
+.story-card__grey .story-card__bar {
+  background-color: #424242;
+}
+.story-card__grey::before {
+  background-image: linear-gradient(-70deg, #424242, transparent 50%);
+}
+.story-card__grey:nth-child(2n)::before {
+  background-image: linear-gradient(-250deg, #424242, transparent 50%);
+}
+.story-card__customcolor .story-card__bar {
+  background-color: var(--projcard-color);
+}
+.story-card__customcolor::before {
+  background-image: linear-gradient(-70deg, var(--projcard-color), transparent 50%);
+}
+.story-card__customcolor:nth-child(2n)::before {
+  background-image: linear-gradient(-250deg, var(--projcard-color), transparent 50%);
+}
+.story-card__description {
+  z-index: 10;
+  font-size: 15px;
+  color: #424242;
+  height: 125px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.story-card__tagbox {
+  position: absolute;
+  bottom: 3%;
+  font-size: 14px;
+  cursor: default;
+  user-select: none;
+  pointer-events: none;
+}
+.story-card__tag {
+  display: inline-block;
+  background: #E0E0E0;
+  color: #777;
+  border-radius: 3px 0 0 3px;
+  line-height: 26px;
+  padding: 0 10px 0 23px;
+  position: relative;
+  margin-right: 20px;
+  cursor: default;
+  user-select: none;
+  transition: color 0.2s;
+}
+.story-card__tag::before {
+  content: "";
+  position: absolute;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+  height: 6px;
+  left: 10px;
+  width: 6px;
+  top: 10px;
+}
+.story-card__tag::after {
+  content: "";
+  position: absolute;
+  border-bottom: 13px solid transparent;
+  border-left: 10px solid #E0E0E0;
+  border-top: 13px solid transparent;
+  right: -10px;
+  top: 0;
+}
+
 .box-card {
   width: 60%;
   display: flex;
